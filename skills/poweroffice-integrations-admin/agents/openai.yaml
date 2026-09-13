@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Integrations Admin"
+  short_description: "Manage PowerOffice Go integrations and API"
+  default_prompt: "Use $poweroffice-integrations-admin to configure or investigate this PowerOffice Go integration."
+policy:
+  allow_implicit_invocation: true

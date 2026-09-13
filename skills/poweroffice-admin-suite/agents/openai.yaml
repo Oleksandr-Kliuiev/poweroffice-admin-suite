@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Admin Suite"
+  short_description: "Unified router for PowerOffice Go administration"
+  default_prompt: "Use $poweroffice-admin-suite to perform this PowerOffice Go administration request through the browser."
+policy:
+  allow_implicit_invocation: true

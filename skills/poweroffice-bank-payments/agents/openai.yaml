@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Bank and Payments"
+  short_description: "Manage PowerOffice Go bank payments"
+  default_prompt: "Use $poweroffice-bank-payments to prepare or review these PowerOffice Go payments."
+policy:
+  allow_implicit_invocation: true

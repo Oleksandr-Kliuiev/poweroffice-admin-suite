@@ -1,0 +1,98 @@
+schema_version: 1
+
+workspace:
+  display_name: "Example PowerOffice workspace"
+  partner_mode: false
+  verified_at: "2026-09-13"
+
+companies:
+  example-no:
+    legal_name: "Example AS"
+    organization_number: "123456789"
+    currency: "NOK"
+    verified_at: "2026-09-13"
+    subscriptions:
+      - "Regnskap"
+      - "Faktura"
+      - "Lønn"
+      - "Timeregistrering"
+      - "Reiseregning"
+
+    access_profiles:
+      employee:
+        description: "Employee using time and expenses"
+        role: "Standard"
+        time:
+          enabled: true
+        expenses:
+          enabled: true
+        travel:
+          enabled: true
+      accountant:
+        description: "Bookkeeper without payment authority"
+        role: "Regnskapsfører"
+        payment_authority: false
+
+    departments:
+      finance:
+        code: "10"
+        name: "Finance"
+      operations:
+        code: "20"
+        name: "Operations"
+
+    approval_flows:
+      supplier-invoice:
+        basis: "gross_amount"
+        levels:
+          - approver_alias: "finance-manager"
+            limit_nok: 50000
+          - approver_alias: "general-manager"
+            unlimited: true
+
+    invoicing_defaults:
+      payment_terms_days: 14
+      delivery_method: "EHF"
+      currency: "NOK"
+      bank_account_alias: "operating-account"
+
+    accounting_defaults:
+      fiscal_year: 2026
+      vat_period: "bi-monthly"
+      lock_date_policy: "after-approved-period-close"
+      responsible_accountant_alias: "lead-accountant"
+
+    payroll_defaults:
+      normal_hours_per_week: 37.5
+      default_pay_day: 20
+      include_fixed_lines: true
+      include_approved_travel: true
+      responsible_payroll_alias: "payroll-owner"
+
+    bank_accounts:
+      operating-account:
+        display_name: "Operating account"
+        last4: "6789"
+
+    integrations:
+      example-integration:
+        environment: "production"
+        owner_alias: "integration-owner"
+        status: "active"
+        masked_key_id: "app-...c7f2"
+        scope_summary:
+          - "customers:read"
+          - "invoices:read"
+
+    safety:
+      protected_users:
+        - "owner@example.invalid"
+      protected_roles:
+        - "Administrator"
+      protected_bank_aliases:
+        - "operating-account"
+      critical_workflows:
+        - "payment-authorization"
+        - "payroll-approval"
+        - "vat-submission"
+        - "period-lock"

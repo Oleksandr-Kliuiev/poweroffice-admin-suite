@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Purchases and Approvals"
+  short_description: "Process supplier invoices and approvals"
+  default_prompt: "Use $poweroffice-purchases-approvals to process this PowerOffice Go supplier document."
+policy:
+  allow_implicit_invocation: true

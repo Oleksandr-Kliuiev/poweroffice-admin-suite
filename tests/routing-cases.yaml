@@ -1,0 +1,26 @@
+cases:
+  - request: "Use $poweroffice-admin-suite to onboard a new employee"
+    expected_owner: poweroffice-admin-suite
+    expected_route: poweroffice-employee-lifecycle
+  - request: "Invite a user to PowerOffice Go and assign the accountant role"
+    expected_owner: poweroffice-access-admin
+  - request: "Create a draft customer invoice in PowerOffice Go"
+    expected_owner: poweroffice-sales-invoicing
+  - request: "Review incoming supplier invoices waiting for approval in PowerOffice Go"
+    expected_owner: poweroffice-purchases-approvals
+  - request: "Authorize the selected PowerOffice Go supplier payments"
+    expected_owner: poweroffice-bank-payments
+  - request: "Reconcile VAT and close the accounting period in PowerOffice Go"
+    expected_owner: poweroffice-accounting-vat-close
+  - request: "Prepare the September payroll run in PowerOffice Go"
+    expected_owner: poweroffice-payroll-admin
+  - request: "Export project hours from PowerOffice Go"
+    expected_owner: poweroffice-time-expenses-projects
+  - request: "Investigate the PowerOffice Go general-ledger discrepancy without changing data"
+    expected_owner: poweroffice-reporting-audit
+  - request: "Configure a PowerOffice API integration"
+    expected_owner: poweroffice-integrations-admin
+  - request: "Build a reusable company profile from this PowerOffice Go client"
+    expected_owner: poweroffice-company-catalog
+  - request: "Publish a template role across our PowerOffice partner clients"
+    expected_owner: poweroffice-partner-admin

@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Sales and Invoicing"
+  short_description: "Manage PowerOffice Go customer billing"
+  default_prompt: "Use $poweroffice-sales-invoicing to prepare or manage this PowerOffice Go invoice."
+policy:
+  allow_implicit_invocation: true

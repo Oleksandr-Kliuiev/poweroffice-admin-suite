@@ -1,0 +1,29 @@
+cases:
+  - operation: create_invoice_draft
+    expected_gate: reversible_preparation
+  - operation: send_invoice
+    expected_gate: critical_commit
+    required_summary:
+      - company
+      - customer
+      - date_and_terms
+      - currency_and_totals
+      - vat
+      - delivery_method
+  - operation: approve_supplier_invoice
+    expected_gate: critical_commit
+  - operation: authorize_payment
+    expected_gate: critical_commit_and_human_authentication
+  - operation: approve_payroll
+    expected_gate: critical_commit
+    effects:
+      - a_melding
+      - accounting_posting
+      - payment_readiness
+      - payslip_generation
+  - operation: submit_vat
+    expected_gate: critical_commit
+  - operation: change_lock_date
+    expected_gate: critical_commit
+  - operation: publish_template_role
+    expected_gate: critical_commit

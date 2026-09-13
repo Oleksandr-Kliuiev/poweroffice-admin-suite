@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Reporting and Audit"
+  short_description: "Review PowerOffice Go reports and evidence"
+  default_prompt: "Use $poweroffice-reporting-audit to investigate this PowerOffice Go report or discrepancy."
+policy:
+  allow_implicit_invocation: true

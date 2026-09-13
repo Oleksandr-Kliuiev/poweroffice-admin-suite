@@ -1,0 +1,34 @@
+{
+  "name": "poweroffice-admin-suite",
+  "version": "0.1.0",
+  "description": "Browser-based PowerOffice Go administration skills for supervised production operations.",
+  "author": {
+    "name": "PowerOffice Admin Suite Contributors"
+  },
+  "keywords": [
+    "poweroffice",
+    "poweroffice-go",
+    "accounting",
+    "payroll",
+    "invoicing",
+    "administration"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PowerOffice Admin Suite",
+    "shortDescription": "Production PowerOffice Go browser administration",
+    "longDescription": "A unified entrypoint and focused Codex skills for supervised PowerOffice Go administration through an authenticated browser, including company settings, access, employee lifecycle, invoicing, purchases, payments, accounting, VAT, payroll, projects, reporting, integrations, and partner operations.",
+    "developerName": "PowerOffice Admin Suite Contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $poweroffice-admin-suite for PowerOffice Go administration.",
+      "Onboard a new employee in PowerOffice Go.",
+      "Prepare this month's supplier payments for review."
+    ],
+    "brandColor": "#F36F21"
+  }
+}

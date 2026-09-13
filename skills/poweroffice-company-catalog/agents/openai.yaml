@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Company Catalog"
+  short_description: "Build private PowerOffice company profiles"
+  default_prompt: "Use $poweroffice-company-catalog to create or validate a private PowerOffice Go company catalog."
+policy:
+  allow_implicit_invocation: true

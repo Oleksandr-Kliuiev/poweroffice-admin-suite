@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Payroll Admin"
+  short_description: "Prepare and administer PowerOffice payroll"
+  default_prompt: "Use $poweroffice-payroll-admin to prepare or review this PowerOffice Go payroll run."
+policy:
+  allow_implicit_invocation: true

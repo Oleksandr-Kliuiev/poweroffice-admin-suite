@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Access Admin"
+  short_description: "Manage PowerOffice Go users and roles"
+  default_prompt: "Use $poweroffice-access-admin to manage this PowerOffice Go user's access."
+policy:
+  allow_implicit_invocation: true

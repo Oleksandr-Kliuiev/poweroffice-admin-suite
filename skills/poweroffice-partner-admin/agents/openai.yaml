@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Partner Admin"
+  short_description: "Manage PowerOffice Go multi-client access"
+  default_prompt: "Use $poweroffice-partner-admin to perform this PowerOffice Go partner or multi-client task."
+policy:
+  allow_implicit_invocation: true

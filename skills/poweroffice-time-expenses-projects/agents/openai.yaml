@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Time and Projects"
+  short_description: "Manage time, expenses, travel, and projects"
+  default_prompt: "Use $poweroffice-time-expenses-projects to manage this PowerOffice Go time, expense, or project task."
+policy:
+  allow_implicit_invocation: true

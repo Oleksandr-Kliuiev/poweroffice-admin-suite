@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Company Admin"
+  short_description: "Configure PowerOffice Go company settings"
+  default_prompt: "Use $poweroffice-company-admin to review or configure this PowerOffice Go company."
+policy:
+  allow_implicit_invocation: true

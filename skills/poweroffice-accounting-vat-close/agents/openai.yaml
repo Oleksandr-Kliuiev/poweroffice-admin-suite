@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Accounting and VAT"
+  short_description: "Manage accounting, VAT, and period close"
+  default_prompt: "Use $poweroffice-accounting-vat-close to handle this PowerOffice Go accounting or VAT task."
+policy:
+  allow_implicit_invocation: true

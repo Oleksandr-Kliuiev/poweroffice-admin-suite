@@ -1,0 +1,11 @@
+.poweroffice/
+company-catalog.yaml
+company-catalog.yml
+*.pfx
+*.p12
+*.key
+*.pem
+*.env
+work/
+__pycache__/
+*.py[cod]

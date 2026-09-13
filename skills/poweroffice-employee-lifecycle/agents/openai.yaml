@@ -1,0 +1,6 @@
+interface:
+  display_name: "PowerOffice Employee Lifecycle"
+  short_description: "Onboard and offboard PowerOffice employees"
+  default_prompt: "Use $poweroffice-employee-lifecycle to complete this employee lifecycle workflow in PowerOffice Go."
+policy:
+  allow_implicit_invocation: true
