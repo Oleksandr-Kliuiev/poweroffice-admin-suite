@@ -26,3 +26,11 @@ cases:
     expected_owner: poweroffice-partner-admin
   - request: "PowerOffice Go: email the selected customer ledger for August to finance@example.test"
     expected_owner: poweroffice-reporting-audit
+    expected_delivery: poweroffice_export_then_outlook_web
+  - request: "On Windows, send the selected PowerOffice profit and loss PDF to finance@example.test through my Outlook mailbox"
+    expected_owner: poweroffice-reporting-audit
+    expected_delivery: same_chrome_profile_signed_in_outlook_web
+  - request: "On my Mac, email this PowerOffice report to me"
+    expected_owner: poweroffice-reporting-audit
+    required_resolution: requesting_user_verified_mailbox_or_contact
+    expected_delivery: same_chrome_profile_signed_in_outlook_web

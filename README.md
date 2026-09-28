@@ -14,7 +14,7 @@ This Codex plugin provides focused skills for supervised PowerOffice Go administ
 - `poweroffice-accounting-vat-close`: vouchers, ledger, VAT, and period close.
 - `poweroffice-payroll-admin`: employee payroll data, payroll runs, and statutory reporting.
 - `poweroffice-time-expenses-projects`: time, travel, expenses, and projects.
-- `poweroffice-reporting-audit`: reporting, discrepancy review, export, and explicitly authorized report email.
+- `poweroffice-reporting-audit`: reporting, discrepancy review, export, and explicitly authorized report email through Outlook on the web.
 - `poweroffice-integrations-admin`: integrations, PowerOffice API, and data exchange.
 - `poweroffice-company-catalog`: private reusable company profiles.
 - `poweroffice-partner-admin`: accounting-partner and multi-client administration.
@@ -35,6 +35,8 @@ Without a catalog, the selected skill discovers current state in the authenticat
 
 ## Operating model
 
-The administrator signs in to PowerOffice Go in Chrome, selects the intended company, and gives Codex the task. The skills reuse that session, execute authorized work, and verify persisted state. For an explicitly requested report email, they verify the exact company/customer, report, period, full recipient and attachment, send once, and inspect acknowledgement/history without repeating an already resolved approval. Native report email is preferred when available; application acceptance is not proof of inbox delivery. Uncertain sends require checking state before any retry.
+The administrator signs in to PowerOffice Go in Chrome, selects the intended company, and gives Codex the task. The skills reuse that session, execute authorized work, and verify persisted state. For an explicitly requested report email, they export the report from PowerOffice and send through Outlook on the web in the same authenticated Chrome profile. They verify the signed-in sender, exact company/customer, report, period, full recipient and required attachments, send once, and inspect Sent Items without repeating an already resolved approval. A sent record is not proof of inbox delivery. Uncertain sends require checking state before any retry.
+
+The same skills serve Windows and macOS users through their own signed-in Outlook mailbox. They require no native Outlook installation, AppleScript, COM, fixed sender, profile name or download path. Attaching exports requires the current browser runtime to expose the actual downloaded file and support uploading it to Outlook; if unavailable, the skill reports that exact blocker. This workflow has not been validated by a live end-to-end Outlook send on either platform.
 
 Invoice sending/posting, payments, statutory filing, payroll approval, period locks, destructive changes and broad multi-client access retain their exact critical review checkpoints unless already explicitly confirmed. MFA, BankID, electronic signatures, and other personal authentication remain human steps.

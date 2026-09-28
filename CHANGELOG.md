@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 — 2026-09-28
+
+- Export PowerOffice reports and deliver through Outlook on the web in the same authenticated Chrome profile.
+- Use each Windows/macOS user's signed-in mailbox, verified recipient and actual exported file without native Outlook or fixed machine/account assumptions.
+- Verify uploaded attachments and Outlook Sent Items; report unsupported file access and uncertain sends without silent mail-service fallbacks.
+
 ## 0.1.1 — 2026-09-28
 
 - Route spoken or written requests without requiring a skill name and reuse authenticated Chrome.
