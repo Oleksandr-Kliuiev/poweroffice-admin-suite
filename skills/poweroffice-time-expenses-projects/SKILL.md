@@ -1,16 +1,14 @@
 ---
 name: poweroffice-time-expenses-projects
-description: Administer PowerOffice Go timesheets, activities, absence, travel claims, expenses, approvers, projects, subprojects, project budgets, and billable-time setup through an authenticated browser. Use for workforce operations and project administration, not payroll approval or final payment authorization.
+description: "PowerOffice Go timesheets, absence, travel claims, expenses, approvers, projects and billable time. Use for time and project operations before payroll approval."
 ---
 
 # PowerOffice Time, Expenses, and Projects
 
-Verify company and organization number, employee or project identity, date range, status, and applicable subscription. Resolve employees by email/employee number and projects by exact project code plus customer.
+Read the [Chrome contract](../poweroffice-admin-suite/references/browser-operation-contract.md) if absent from working context; retain it across related commands. Load only the relevant workflow section below, including its prerequisites and verification.
 
-Read [references/time-expense-project.md](references/time-expense-project.md) for entry, approval, project setup, billing dependencies, reporting, pagination, and verification.
+Use [time/expense/project operations](references/time-expense-project.md): **Timesheets and absence**, **Expenses and travel**, or **Projects**. Verify subscription, employee email/number or project code/customer, date range and current status.
 
-Separate registration, submission, approval, payroll import, invoicing, and payment. Approving a travel claim or expense can trigger payment or payroll treatment depending on company settings; inspect the configured treatment and summarize the financial effect before final approval.
+Keep registration, submission, approval, payroll import, invoicing and payment separate. Expense/travel approval with financial effects is a critical commit; inspect configured treatment first. Never invent hours, distance, purpose, receipts, dimensions, VAT or approvers. Approve one's own entries only when verified policy permits and explicitly requested.
 
-Do not invent hours, travel distance, expense purpose, receipts, projects, activities, VAT, or approvers. Do not approve one's own entries unless the verified policy permits it and the request is explicit.
-
-Finish with exact employee/project, period, submitted/approved state, totals at the minimum necessary detail, approver chain, payroll/invoice/payment effect, exceptions, and required human action.
+Report target, period, status, minimum necessary totals, approver chain, downstream payroll/invoice/payment effects and exceptions.

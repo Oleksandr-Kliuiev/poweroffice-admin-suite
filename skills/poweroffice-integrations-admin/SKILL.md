@@ -1,16 +1,14 @@
 ---
 name: poweroffice-integrations-admin
-description: Administer PowerOffice Go integrations and data exchange, including integration activation, API client access, PowerOffice API environment selection, import/export preparation, mapping validation, and integration troubleshooting. Use for integration-focused requests; do not store or expose credentials and do not substitute API use for an unauthorized browser mutation.
+description: "PowerOffice Go integration activation, API access, imports, exports and sync troubleshooting. Use for integration work; ordinary report delivery belongs to reporting."
 ---
 
 # PowerOffice Integrations Admin
 
-Verify company, organization number, integration name, environment, requested scope, and current activation. Keep demo and production credentials, endpoints, and client contexts strictly separated.
+Read the [Chrome contract](../poweroffice-admin-suite/references/browser-operation-contract.md) if absent from working context; retain it across related commands. Load only the relevant workflow section below, including its prerequisites and verification.
 
-Read [references/integrations.md](references/integrations.md) for browser activation, API authentication boundaries, imports, exports, duplicate prevention, secret handling, and verification.
+Use [integration operations](references/integrations.md): **Environments and credentials**, then **Browser activation or access change**, **Imports**, or **API writes and idempotency** as relevant. Verify company, registered integration/publisher, environment, scope and current activation; separate demo and production.
 
-Never write application keys, client keys, subscription keys, access tokens, certificates, or passwords to a skill, catalog, prompt, report, shell history, or source repository. Use an approved secret store and masked identifiers. Do not display tool output that could contain tokens.
+Keep credentials in an approved secret store; never expose keys/tokens in prompts, reports, tool output, shell history, catalogs or repositories. Activation, scope expansion, destructive imports and production writes require exact authorization. Before bulk execution, verify mapping, representative preview, date/currency formats, duplicates/idempotency, error handling and rollback.
 
-Integration activation, scope expansion, destructive import, and production writes require exact authorization. For bulk data exchange, validate a representative preview, field mapping, company identity, date/currency formats, idempotency key or duplicate strategy, error handling, and rollback before execution.
-
-Finish with company, integration and environment, masked key identifiers only, authorized scopes, records accepted/rejected, duplicate handling, resulting sync state, and rotation or human steps. Never report a token value.
+Report masked identifiers, scopes, accepted/rejected/skipped/duplicate counts, sync state and needed rotation/human steps.

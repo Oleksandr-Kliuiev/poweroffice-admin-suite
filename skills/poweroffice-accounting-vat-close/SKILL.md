@@ -1,16 +1,14 @@
 ---
 name: poweroffice-accounting-vat-close
-description: Administer PowerOffice Go accounting through an authenticated browser, including vouchers, journal entries, general ledger corrections, account and VAT coding, VAT reconciliation and reporting, lock dates, and period close. Use for bookkeeping and close requests, not payroll calculation or bank authorization.
+description: "PowerOffice Go vouchers, ledger corrections, VAT reconciliation and filing, lock dates and period close. Use for bookkeeping and close work."
 ---
 
 # PowerOffice Accounting, VAT, and Close
 
-Verify company and organization number, accounting period, document date, voucher number when present, account, VAT code, dimensions, currency, and debit/credit balance. Treat corrections as linked accounting events, not silent overwrites.
+Read the [Chrome contract](../poweroffice-admin-suite/references/browser-operation-contract.md) if absent from working context; retain it across related commands. Load only the relevant workflow section below, including its prerequisites and verification.
 
-Read [references/accounting-vat-close.md](references/accounting-vat-close.md) for journal preparation, correction strategy, VAT reconciliation, filing, lock dates, close sequencing, and verification.
+Use [accounting operations](references/accounting-vat-close.md): **Voucher and journal preparation**, **VAT reconciliation and filing**, or **Period close and lock date**.
 
-Preparing an unposted voucher or read-only reconciliation may proceed when authorized. Posting, reversing posted history, approving or submitting VAT, and changing a lock date are critical commits. Present the exact period, affected vouchers/accounts, debit/credit totals, VAT impact, reporting effect, and rollback/correction method before committing.
+Verify exact period, document date, voucher/account/VAT codes, dimensions, currency and balanced debit/credit totals. Posting, reversing history, VAT approval/submission and lock-date changes are critical commits; include affected accounts/vouchers, VAT/reporting impact and correction method in the checkpoint.
 
-Do not provide tax or accounting judgment when the coding is ambiguous. Surface the evidence and require the responsible accountant's decision. Never backdate around a locked period or unlock one merely to make an edit easier.
-
-Finish with company, period, voucher and account identifiers, balanced totals, posting state, VAT discrepancies, filed/approved state, lock date, unresolved judgments, and required accountant actions.
+Obtain the responsible accountant's decision for ambiguous treatment. Never backdate around a lock or unlock merely to simplify editing. Report persisted posting/filing/lock state, identifiers, discrepancies and unresolved judgments.

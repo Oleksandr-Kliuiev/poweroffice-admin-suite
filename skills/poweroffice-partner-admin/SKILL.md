@@ -1,16 +1,14 @@
 ---
 name: poweroffice-partner-admin
-description: Administer PowerOffice Go accounting-partner and multi-client capabilities through an authenticated browser, including client portfolios, template roles, user access across clients, responsibility transfer, and controlled bulk publication. Use only for partner or multi-client work, not routine administration inside one company.
+description: "PowerOffice Go partner workspaces, client portfolios, template roles and access across clients. Use for partner and multi-client work, not single-company admin."
 ---
 
 # PowerOffice Partner Admin
 
-Treat every client as a separate production legal entity. Resolve the partner workspace, each target client by legal name and organization number, the exact users by email, and the template role by name plus current privileges.
+Read the [Chrome contract](../poweroffice-admin-suite/references/browser-operation-contract.md) if absent from working context; retain it across related commands. Load only the relevant workflow section below, including its prerequisites and verification.
 
-Read [references/partner-operations.md](references/partner-operations.md) for multi-client discovery, template roles, bulk assignment, impact preview, deactivation dependencies, pagination, and verification.
+Read [partner operations](references/partner-operations.md): **Resolve scope**, then **Template-role change** or **Bulk assignment or removal**. Every client is a separate production legal entity; resolve organization numbers, exact user emails and actual role privileges.
 
-Never interpret a partner-level role template as universal authorization. Before publication or mass assignment, inspect the preview count, every included and excluded client, affected users, privilege delta, protected clients/users, and rollback method. Publishing a template-role change or multi-client assignment is a critical commit.
+A template role is not authorization. Publication/mass assignment is a critical commit: review every included/excluded client, protected users/clients, privilege delta, preview counts and rollback. Transfer Administrator, subscription, security, payment, payroll and approval responsibilities before deactivation.
 
-When deactivating a partner user, transfer Administrator, subscription-administrator, security-contact, payment, payroll, and workflow responsibilities first. Do not remove access from unverified similarly named clients.
-
-Finish with partner workspace, exact clients and organization numbers, users, template-role before/after state, impact counts, exclusions, publication status, propagation, blocked responsibilities, and human steps.
+Report exact clients/users, role change, counts/exclusions, publication and propagation state, blocked responsibilities and human steps.

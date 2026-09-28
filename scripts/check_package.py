@@ -52,9 +52,13 @@ def main() -> int:
             )
         else:
             descriptions[description] = skill_dir.name
+        if description and len(description) > 220:
+            errors.append(f"description budget exceeded in {skill_dir.name}: {len(description)} > 220")
 
         if interface.is_file():
             interface_text = interface.read_text(encoding="utf-8")
+            if re.search(r"(?m)^\s*allow_implicit_invocation:\s*false\b", interface_text):
+                errors.append(f"automatic invocation disabled in {skill_dir.name}")
             if f"${skill_dir.name}" not in interface_text:
                 errors.append(
                     f"default prompt does not name ${skill_dir.name}: "

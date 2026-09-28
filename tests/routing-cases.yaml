@@ -24,3 +24,5 @@ cases:
     expected_owner: poweroffice-company-catalog
   - request: "Publish a template role across our PowerOffice partner clients"
     expected_owner: poweroffice-partner-admin
+  - request: "PowerOffice Go: email the selected customer ledger for August to finance@example.test"
+    expected_owner: poweroffice-reporting-audit

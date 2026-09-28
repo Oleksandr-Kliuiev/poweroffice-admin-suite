@@ -27,3 +27,10 @@ cases:
     expected_gate: critical_commit
   - operation: publish_template_role
     expected_gate: critical_commit
+  - operation: email_report
+    state: exact_company_report_period_recipient_attachment_verified_and_send_requested
+    expected_gate: existing_exact_authorization_no_redundant_confirmation
+    required_verification: observed_acknowledgement_or_send_history_not_inbox_delivery
+  - operation: retry_report_email_after_timeout
+    expected_gate: inspect_state_before_conditional_retry
+    retry_only_if: evidence_proves_no_submission

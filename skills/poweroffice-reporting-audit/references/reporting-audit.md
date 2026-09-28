@@ -2,7 +2,7 @@
 
 ## Scope the evidence
 
-Record company/legal entity, organization number, report name, period, as-of timestamp, posted/draft basis, currency, comparison period, dimensions, status filters, and user-visible timezone. Reopen report settings after generation to confirm they persisted.
+Record company/legal entity, organization number, report name, period, as-of timestamp, posted/draft basis, currency, comparison period, dimensions, status filters, and user-visible timezone. Verify parameters in the generated report; reopen settings only when the report does not expose them or they appear inconsistent.
 
 ## Reconcile and drill down
 
@@ -17,7 +17,7 @@ Classify each discrepancy as timing, filter/basis mismatch, missing/unposted ite
 
 ## Complete lists and exports
 
-Clear stale filters, use stable sorting, traverse every page or virtual row, and track first/last stable identifiers and result counts. If the report exports directly to Excel/CSV/PDF, verify the exported date range, row count, total, and file name. Store sensitive exports only in the user-approved private location.
+Preserve requested filters and remove conflicting stale filters. Prefer a verified all-results report/export instead of scanning every page. When the UI is the only complete source, use stable sorting, traverse every page or virtual row, and track first/last stable identifiers and result counts. For Excel/CSV/PDF, verify date range, row count when applicable, total, and file name; CSV/Excel may include columns hidden in the report view. Store sensitive exports only in the user-approved private location.
 
 ## Evidence quality
 

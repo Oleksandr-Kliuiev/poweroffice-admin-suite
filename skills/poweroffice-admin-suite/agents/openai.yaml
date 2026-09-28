@@ -1,6 +1,6 @@
 interface:
   display_name: "PowerOffice Admin Suite"
   short_description: "Unified router for PowerOffice Go administration"
-  default_prompt: "Use $poweroffice-admin-suite to perform this PowerOffice Go administration request through the browser."
+  default_prompt: "Use $poweroffice-admin-suite to perform this PowerOffice Go administration request in the existing authenticated Chrome session."
 policy:
   allow_implicit_invocation: true

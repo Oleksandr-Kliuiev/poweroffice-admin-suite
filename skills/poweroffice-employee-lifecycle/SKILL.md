@@ -1,32 +1,16 @@
 ---
 name: poweroffice-employee-lifecycle
-description: Execute end-to-end PowerOffice Go employee onboarding, employment changes, and safe offboarding through an authenticated browser, coordinating employee records, user access, roles, approvers, time and expense access, project responsibilities, and payroll readiness. Use for lifecycle requests spanning at least two of these areas.
+description: "PowerOffice Go employee onboarding, employment changes and offboarding across employee records, user access, approvers, time, projects and payroll readiness."
 ---
 
 # PowerOffice Employee Lifecycle
 
-Own the complete lifecycle workflow and keep one evidence record for the exact person. A PowerOffice user, employee record, payroll employment, and approver assignment are distinct objects; link them only after verifying stable fields such as email, employee number, and employment dates.
+Read the [Chrome contract](../poweroffice-admin-suite/references/browser-operation-contract.md) if absent from working context; retain it across related commands. Load only the relevant workflow section below, including its prerequisites and verification.
 
-## Establish context
+Own the complete workflow; do not load every specialist. Choose [onboarding](references/onboarding.md), [offboarding](references/offboarding.md), or [employee change](references/employee-change.md). Keep one person-level record; users, employees, payroll employment and approver assignments remain distinct until linked by verified email, employee number and dates.
 
-1. Attach to the user-mentioned PowerOffice Go tab when present; otherwise reuse the authenticated PowerOffice session.
-2. Confirm the active company, organization number, signed-in administrator, and exact employee.
-3. Inspect current user and employee state before mutation. Continue partial workflows idempotently.
-4. Use `.poweroffice/company-catalog.yaml` when available for approved profiles and defaults. Verify every referenced role, department, approver, activity, project, and payroll setting live.
-5. Read [references/browser-operation-contract.md](references/browser-operation-contract.md).
+Verify signed-in administrator and existing person state; resume partial work idempotently. Read only the selected catalog profile when useful and verify each referenced role, department, approver, activity, project and payroll setting live.
 
-## Choose one workflow
+Complete lifecycle requests authorize ordinary reversible changes for that person/profile, not Administrator/payment authority, payroll approval, history deletion, A-melding submission, sensitive disclosure or unrelated company settings. Enter required sensitive employment values only from an appropriate secure user-provided source; never repeat them in reports.
 
-- New employee: read [references/onboarding.md](references/onboarding.md).
-- Departing employee: read [references/offboarding.md](references/offboarding.md).
-- Department, manager, employment, role, or responsibility change: read [references/employee-change.md](references/employee-change.md).
-
-## Authorization
-
-A request for complete onboarding, transfer, or safe offboarding authorizes ordinary reversible changes for the named person and stated profile. It does not authorize Administrator access, payment authority, payroll approval, deletion of historical records, submission of A-melding, disclosure of sensitive payroll data, or unrelated company-wide changes.
-
-Do not enter or persist national identity numbers, personal bank accounts, tax details, salary amounts, or other sensitive employment data unless the user provides the exact value through an appropriate secure workflow and the task requires it. Never repeat those values in the completion report.
-
-## Finish
-
-Report company, exact employee and email, employee/user linkage, verified roles, approvers, time/expense/project setup, payroll readiness without sensitive values, completed and already-correct steps, pending invitations, blocked items, and human actions. Distinguish `record created`, `invited`, `linked`, `configured`, `reported`, and `paid`.
+Report linkage, roles, approvers, time/expense/projects and payroll readiness, already-correct/completed steps and pending/human steps. Distinguish record created, invited, linked, configured, reported and paid.

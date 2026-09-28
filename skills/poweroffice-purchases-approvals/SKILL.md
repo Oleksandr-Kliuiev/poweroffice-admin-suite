@@ -1,16 +1,14 @@
 ---
 name: poweroffice-purchases-approvals
-description: Administer PowerOffice Go purchasing and document approval through an authenticated browser, including suppliers, incoming documents, supplier invoices and credit notes, coding, duplicate review, approval routing, approvers, and amount limits. Use before payment authorization; do not use to release money from a bank account.
+description: "PowerOffice Go suppliers, incoming invoices, coding, duplicates and approval routes or limits. Use for purchases and document approval before bank payment."
 ---
 
 # PowerOffice Purchases and Approvals
 
-Verify company and organization number. Resolve suppliers by supplier number plus organization number, invoices by supplier invoice number/reference, and approvers by exact user identity.
+Read the [Chrome contract](../poweroffice-admin-suite/references/browser-operation-contract.md) if absent from working context; retain it across related commands. Load only the relevant workflow section below, including its prerequisites and verification.
 
-Read [references/purchase-approval.md](references/purchase-approval.md) for duplicate controls, document states, coding, approval limits, queue handling, and verification.
+Use [purchase operations](references/purchase-approval.md): **Resolve and deduplicate**, **Process an incoming document**, or **Approval flows**, plus **Verification**. Resolve suppliers by stable number/organization number, invoice reference and exact approvers.
 
-Separate document capture, accounting coding, approval for posting, posting, and payment readiness. Never mark an invoice paid merely because it is approved or posted. Do not bypass configured approval levels, split a document to evade a limit, replace an approver without authorization, or change bank details based only on the invoice document.
+Keep capture, coding, approval, posting and payment states separate. Final approval/posting creating a liability is a critical commit; bank release requires its separate workflow. Never bypass approval levels, split documents to evade limits, replace approvers without authorization, or change bank details based only on invoice text.
 
-Posting or final approval that creates an accounting liability is a critical commit. Final bank authorization belongs to `poweroffice-bank-payments` and requires a separate review.
-
-Finish with supplier and document identifiers, duplicate-check evidence, gross/VAT/net totals, coding and dimensions, approval route and status, posting state, payment readiness, and exceptions.
+Report identifiers, duplicate evidence, net/VAT/gross, dimensions, approval route/state, posting, payment readiness and exceptions. Approval/posting does not prove payment.

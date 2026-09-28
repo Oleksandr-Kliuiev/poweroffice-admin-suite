@@ -1,7 +1,7 @@
 {
   "name": "poweroffice-admin-suite",
-  "version": "0.1.0",
-  "description": "Browser-based PowerOffice Go administration skills for supervised production operations.",
+  "version": "0.1.1",
+  "description": "PowerOffice Go administration skills for natural-language and voice tasks in authenticated Chrome.",
   "author": {
     "name": "PowerOffice Admin Suite Contributors"
   },

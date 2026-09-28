@@ -1,10 +1,10 @@
 # PowerOffice Admin Suite
 
-This Codex plugin provides focused skills for supervised PowerOffice Go administration through an already authenticated browser session. It is designed for real company work: exact company and object resolution, complete-list handling, idempotent changes, financial state awareness, and independent after-state verification.
+This Codex plugin provides focused skills for supervised PowerOffice Go administration through an already authenticated Chrome session. It is designed for real company work: exact company and object resolution, complete-list handling, idempotent changes, financial state awareness, and independent after-state verification.
 
 ## Included skills
 
-- `poweroffice-admin-suite`: explicit unified entrypoint and dispatcher.
+- `poweroffice-admin-suite`: natural-language and voice task routing.
 - `poweroffice-company-admin`: company settings, subscriptions, dimensions, and defaults.
 - `poweroffice-access-admin`: users, invitations, roles, and permissions.
 - `poweroffice-employee-lifecycle`: onboarding, transfer, and offboarding.
@@ -14,16 +14,18 @@ This Codex plugin provides focused skills for supervised PowerOffice Go administ
 - `poweroffice-accounting-vat-close`: vouchers, ledger, VAT, and period close.
 - `poweroffice-payroll-admin`: employee payroll data, payroll runs, and statutory reporting.
 - `poweroffice-time-expenses-projects`: time, travel, expenses, and projects.
-- `poweroffice-reporting-audit`: read-only reporting, discrepancy review, and evidence export.
+- `poweroffice-reporting-audit`: reporting, discrepancy review, export, and explicitly authorized report email.
 - `poweroffice-integrations-admin`: integrations, PowerOffice API, and data exchange.
 - `poweroffice-company-catalog`: private reusable company profiles.
 - `poweroffice-partner-admin`: accounting-partner and multi-client administration.
 
-Codex can select a focused skill from an ordinary request that clearly mentions PowerOffice Go. Use the stable suite entrypoint for explicit routing:
+Codex can select a focused skill from an ordinary spoken or written request that mentions PowerOffice Go. No skill name is required; the suite routes requests when needed. Explicit invocation remains available:
 
 ```text
 $poweroffice-admin-suite conduct a complete onboarding for a new employee in PowerOffice Go
 ```
+
+Install the complete `skills/` bundle together. Each task reads only its owning skill, needed workflow and shared Chrome contract; it does not load all 14 skills. Keep the authenticated browser session and verified task context across related voice commands. Skills do not provide a voice interface themselves; the host must support voice and browser tools.
 
 ## Company catalog
 
@@ -33,4 +35,6 @@ Without a catalog, the selected skill discovers current state in the authenticat
 
 ## Operating model
 
-The administrator signs in to PowerOffice Go, selects the intended company, and gives Codex the task. The skills execute routine authorized work and verify persisted state. They stop at a review checkpoint before sending, posting, paying, filing statutory reports, approving payroll, locking periods, or publishing broad multi-client access changes. MFA, BankID, electronic signatures, and other personal authentication remain human steps.
+The administrator signs in to PowerOffice Go in Chrome, selects the intended company, and gives Codex the task. The skills reuse that session, execute authorized work, and verify persisted state. For an explicitly requested report email, they verify the exact company/customer, report, period, full recipient and attachment, send once, and inspect acknowledgement/history without repeating an already resolved approval. Native report email is preferred when available; application acceptance is not proof of inbox delivery. Uncertain sends require checking state before any retry.
+
+Invoice sending/posting, payments, statutory filing, payroll approval, period locks, destructive changes and broad multi-client access retain their exact critical review checkpoints unless already explicitly confirmed. MFA, BankID, electronic signatures, and other personal authentication remain human steps.

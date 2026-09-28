@@ -1,16 +1,14 @@
 ---
 name: poweroffice-payroll-admin
-description: Administer PowerOffice Go payroll through an authenticated browser, including payroll settings, employee payroll data, payroll bases, payroll runs, corrections, payslips, employment reporting, A-melding, and payment readiness. Use for payroll-focused requests, not user access or final bank authorization.
+description: "PowerOffice Go payroll setup, employee payroll data, runs, corrections, payslips and A-melding. Use for payroll work; bank authorization is separate."
 ---
 
 # PowerOffice Payroll Admin
 
-Payroll contains highly sensitive personal and financial data. Verify company and organization number, payroll period, payment date, run type, employee set, active employment relationships, and imported bases. Minimize exposure and never reproduce national identity numbers, bank accounts, tax details, or salary line detail in commentary or reports.
+Read the [Chrome contract](../poweroffice-admin-suite/references/browser-operation-contract.md) if absent from working context; retain it across related commands. Load only the relevant workflow section below, including its prerequisites and verification.
 
-Read [references/payroll-operations.md](references/payroll-operations.md) for preparation, review, approval effects, correction, A-melding, list handling, and verification.
+Use [payroll operations](references/payroll-operations.md): **Prepare a payroll run**, **Critical commit: approve**, or **Corrections and no-pay reporting**. Verify period, payment date, run type, employee set, employment relationships and imported bases.
 
-Creating or editing an unapproved payroll run may proceed when authorized. Approving a run is a critical commit because it can submit A-melding, post accounting entries, prepare payments, and generate payslips. Immediately before approval, summarize company, period, run type, payment date, employee count, aggregate gross/tax/net totals, exclusions, warnings, and expected effects. Final bank authorization remains a separate workflow.
+Approval can submit A-melding, post accounting, prepare payments and generate payslips; retain the financial checkpoint and verify each resulting state separately. Final bank authorization is separate. Never invent employment, salary, tax, bank, benefit, leave or deduction data; the responsible payroll administrator resolves ambiguous warnings/statutory treatment.
 
-Never invent employment, salary, tax, bank, benefit, leave, or deduction data. Require the responsible payroll administrator to resolve ambiguous warnings and statutory interpretations.
-
-Finish with period, run identifier, employee count, aggregate totals, warnings, approved/unapproved state, A-melding acknowledgement, posting, payslip generation, payment readiness, and blocked human steps—without sensitive employee-level values.
+Use identifiers and aggregate totals in commentary/completion; never reproduce national identity, account, tax or salary-line details. Report run state, warnings, filing acknowledgement, posting, payslips and payment readiness.
