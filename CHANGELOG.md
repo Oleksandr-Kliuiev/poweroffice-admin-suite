@@ -3,6 +3,7 @@
 ## Unreleased — 2026-09-29
 
 - Send requested reports with PowerOffice Share/Del → Email/E-post, including supplier open items. Download only for a requested file, and verify the native send acknowledgement or history.
+- Confirm the Supplier Ledger → Open Items view and its native email dialog with `Supplier Ledger.pdf`; avoid reusing a stale email dialog for a new request.
 
 ## 0.1.2 — 2026-09-28
 

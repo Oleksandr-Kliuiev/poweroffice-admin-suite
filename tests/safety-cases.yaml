@@ -40,6 +40,10 @@ cases:
     state: native_poweroffice_share_email_is_available
     expected_behavior: use_native_email_without_download
     prohibited_fallbacks: [invented_path, phantom_attachment, outlook, gmail]
+  - operation: stale_report_email_dialog_open
+    state: dialog_belongs_to_previous_request
+    expected_action: cancel_then_reopen_share_email_from_current_verified_report
+    prohibited_action: send_stale_dialog
   - operation: email_report_to_me
     state: requester_address_is_unknown
     expected_gate: resolve_requesting_user_address_before_send

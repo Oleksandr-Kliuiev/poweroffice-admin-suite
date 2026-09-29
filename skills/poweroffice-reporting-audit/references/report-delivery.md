@@ -2,7 +2,7 @@
 
 Use this workflow for one-off report delivery. When the user asks to email a report, send it from the report's own `Share/Del → Email/E-post` action in PowerOffice. Do not download the report or switch to Outlook for that request. Export a file only when the user asks to download or save one, or when a native email action is unavailable and the user authorizes another delivery method.
 
-The native email dialog was observed in a live check of `Menu → Reports → Profit and Loss → Share` on 2026-09-28; the dialog was cancelled without sending. Verify current controls and the send result at runtime. That check does not prove delivery for other report types.
+The native email dialog was observed for `Menu → Reports → Profit and Loss → Share` on 2026-09-28 and for `Reports → Supplier Ledger → Open Items` on 2026-09-29. The latter showed an attached `Supplier Ledger.pdf`. Neither observation is proof of a completed send. Verify current controls and the send result at runtime.
 
 ## Resolve the request
 
@@ -13,13 +13,13 @@ Use the exact full email address supplied by the user or an unambiguous authoriz
 ## Prepare the report
 
 1. Verify the active company. If another company is named, use the client selector, search by exact name/organization number where supported, select the match, and verify the new context. Do not add a client.
-2. Stay in the intended report when already open. Otherwise use `Menu/Meny → Reports/Rapporter` and the requested report. For an open supplier items list, use the supplier ledger/open items report (`Leverandørreskontro → Åpne poster`, or the equivalent visible report) and retain supplier, date and status filters. Do not substitute customer ledger or account statement. For customer ledger, distinguish `Åpne poster` from `Kontoutskrift`; they have different bases.
+2. Stay in the intended report when already open. Otherwise use `Menu/Meny → Reports/Rapporter` and the requested report. For an open supplier items list, use **Supplier Ledger / Leverandørreskontro → Open Items / Åpne poster** and retain supplier, date and status filters. The observed report also offered **Statement**; do not switch to it for an open-items request. For customer ledger, distinguish `Åpne poster` from `Kontoutskrift`; they have different bases.
 3. Apply the requested period/as-of date and relevant filters once. Wait for the updated report and verify heading, parameter summary, supplier/customer when relevant, and a control total/count where exposed. Use visible parameters as evidence; reopen settings only if hidden or inconsistent. Profit/loss cannot span accounting years: prepare separate requested-year reports or clarify a requested cross-year presentation.
 
 ## Send with Share → Email
 
-1. Open the report's `Share/Del` control and choose `Email/E-post` from that menu. Do not choose PDF, Excel, CSV or Download for an email request unless the user separately requested a saved file.
-2. In the PowerOffice email dialog, verify that the selected report, company, period/as-of date and filters are represented. Enter the exact full recipient address and verify it after entry. Remove unrelated prefilled recipients. Use a concise subject and message identifying the report, company and period if the dialog provides those fields.
+1. Open the report's `Share/Del` control and choose `Email/E-post` from that menu. Do not choose PDF, Excel, CSV or Download for an email request unless the user separately requested a saved file. If an old email dialog is already open, verify that it belongs to the current request; otherwise cancel it and open a new one from the verified report.
+2. Before opening the email dialog, verify the report's company, Open Items view, as-of date and filters in the report itself. In the dialog, verify the report attachment or report identity (the observed supplier dialog named `Supplier Ledger.pdf`). Do not require every filter to be repeated in the dialog when it is already verified in the report. Enter the exact full recipient address and verify it after entry. Remove unrelated prefilled recipients. Use a concise subject and message identifying the report, company and period if the dialog provides those fields.
 3. Before sending, verify every recipient and the report or attachment shown in the dialog. If the dialog cannot identify the report or destination reliably, stop before sending and state what could not be verified. Do not silently switch to another mail service.
 4. With an explicit matching send request, select `Send/Send e-post` once without redundant confirmation. Observe PowerOffice's acknowledgement or available sharing/history record and verify the recipient/report when shown. Report exactly what PowerOffice confirms; accepted or queued does not prove inbox delivery.
 
