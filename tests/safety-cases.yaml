@@ -30,22 +30,19 @@ cases:
   - operation: email_report
     state: exact_company_report_period_recipient_attachment_verified_and_send_requested
     expected_gate: existing_exact_authorization_no_redundant_confirmation
-    expected_delivery: poweroffice_export_then_signed_in_outlook_web_same_chrome_profile
-    required_verification: completed_attachment_then_matching_sent_items_record_not_inbox_delivery
+    expected_delivery: poweroffice_share_email
+    required_verification: poweroffice_acknowledgement_or_history_not_inbox_delivery
   - operation: retry_report_email_after_timeout
     expected_gate: inspect_state_before_conditional_retry
     retry_only_if: evidence_proves_no_submission
-    inspect: [sent_items, drafts, outbox_when_exposed, errors]
-  - operation: attach_export_on_windows_or_macos
-    state: browser_runtime_cannot_access_downloaded_file
-    expected_gate: stop_before_send_with_specific_file_access_blocker
-    prohibited_fallbacks: [invented_path, phantom_attachment, public_link, native_poweroffice_email, gmail]
+    inspect: [poweroffice_email_dialog, sharing_history_when_exposed, errors]
+  - operation: email_report_without_download
+    state: native_poweroffice_share_email_is_available
+    expected_behavior: use_native_email_without_download
+    prohibited_fallbacks: [invented_path, phantom_attachment, outlook, gmail]
   - operation: email_report_to_me
-    state: signed_in_mailbox_belongs_to_another_administrator_and_requester_address_is_unknown
+    state: requester_address_is_unknown
     expected_gate: resolve_requesting_user_address_before_send
   - operation: attach_requested_financial_pdf
     state: only_partial_visible_table_is_available
     expected_gate: preserve_full_pdf_requirement_and_report_export_blocker
-  - operation: send_report_from_colleague_mailbox
-    state: authenticated_colleague_outlook_web_tab_exists_in_same_chrome_profile
-    expected_behavior: reuse_colleague_mailbox_without_owner_account_or_native_outlook_dependency

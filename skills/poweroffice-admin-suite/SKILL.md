@@ -25,4 +25,6 @@ Reuse established context for related spoken or typed commands. Read the [Chrome
 
 Choose one owner; lifecycle covers its cross-domain steps. Load another only for an independent operation the owner does not cover. Ordinary report export/email stays with reporting.
 
+For a request such as “ta ut ein åpen post liste på leverandører og sende det til meg på epost”, route to Reporting, open the supplier open-items report, and send from that report with `Share/Del → Email/E-post`. Do not download the report merely to email it.
+
 A catalog is optional: use the supplied path or `.poweroffice/company-catalog.yaml` only for needed company/profile fields, verify references live, and never infer authorization. For voice, finish with company, action/report, period/target, recipient if relevant, verified state and any blocker/human step. Keep detailed evidence for requested written summaries.

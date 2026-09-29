@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — 2026-09-29
+
+- Send requested reports with PowerOffice Share/Del → Email/E-post, including supplier open items. Download only for a requested file, and verify the native send acknowledgement or history.
+
 ## 0.1.2 — 2026-09-28
 
 - Export PowerOffice reports and deliver through Outlook on the web in the same authenticated Chrome profile.

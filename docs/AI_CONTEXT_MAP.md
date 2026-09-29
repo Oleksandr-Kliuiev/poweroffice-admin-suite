@@ -14,7 +14,7 @@ Use this map to load the smallest sufficient context.
 | Vouchers, ledger, VAT, period close | `skills/poweroffice-accounting-vat-close/SKILL.md` | `references/accounting-vat-close.md` |
 | Payroll run or reporting | `skills/poweroffice-payroll-admin/SKILL.md` | `references/payroll-operations.md` |
 | Time, expenses, travel, projects | `skills/poweroffice-time-expenses-projects/SKILL.md` | `references/time-expense-project.md` |
-| Reports, export and authorized Outlook web email on Windows/macOS | `skills/poweroffice-reporting-audit/SKILL.md` | `references/report-delivery.md`; audit reference only for investigation |
+| Reports, export and authorized PowerOffice Share → Email | `skills/poweroffice-reporting-audit/SKILL.md` | `references/report-delivery.md`; audit reference only for investigation |
 | Integrations, API, import/export | `skills/poweroffice-integrations-admin/SKILL.md` | `references/integrations.md` |
 | Company profile discovery/catalog | `skills/poweroffice-company-catalog/SKILL.md` | Schema, example, validator |
 | Partner portal and multi-client roles | `skills/poweroffice-partner-admin/SKILL.md` | `references/partner-operations.md` |
